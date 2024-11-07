@@ -1,0 +1,382 @@
+html{
+    scroll-behavior: smooth;
+    }
+    body {
+    background: linear-gradient(to right, #ffffff, #f3f4f6, #e2f6ef, #e9f1ff, #fcfdfe, #f8fdf8);
+    font-family: "Oswald", sans-serif,lato;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    }
+    .navbar {
+    background-color: #fff;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: sepia(90%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    }
+    .logo {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    }
+    .logo image{
+    width: 40px;
+    margin-right: 10px;
+    }
+    .dog-gif{
+    width: 40px;
+    margin-left: 10px;
+    animation: dogRun 2s linear infinite;
+    }
+    @keyframes highlightPulse{
+    0%, 100%{ transform: translateX(0); }
+    50%{ transform:translate(5px) ;}
+    }
+    .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+    .nav-links li {
+    position: relative;
+    }
+    .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    border-radius: 5px;
+    }
+    .nav-links a::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFD700;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    }
+    .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    }
+    .nav-links a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff6347;
+    transition: width 0.3s ease;
+    }
+    .nav-links a:hover::before {
+    width: 100%;
+    }
+    .nav-links a:hover {
+    color: #ff6347;
+    }
+    @media (max-width: 600px) {
+    header nav ul {
+    flex-direction: column;
+    }
+    header nav ul li {
+    margin: 5px 0;
+    }
+    }
+    nav ul li a {
+    color: white;
+    text-decoration: none;
+    }
+    main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .highlight-text {
+    color: #E70215;
+    }
+    .highlight-text:nth-of-type(3) {
+    color: #E9322E;
+    }
+    #live-contests {
+    padding: 20px;
+    background: #323232;
+    color:  #edfaf5;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    }
+    #live-contests h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    }
+    #live-contests p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 10px 0;
+    }
+    #contests{
+    background: linear-gradient(to right, #ffffff, #f3f4f6, #e2f6ef, #e9f1ff, #fcfdfe, #f8fdf8);
+    }
+    .contest-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    }
+    .contest-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8fdfb;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    }
+    .contest-card h3 {
+    color: #333;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    }
+    .contest-card h4 {
+    color: #4CAF50;
+    font-size: 1.2em;
+    margin: 10px 0;
+    }
+    .contest-card p {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    }
+    .prize-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    }
+    .prize-icon {
+    width: 50px;
+    height: 50px;
+    }
+    button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    }
+    button:hover {
+    background-color: #45a049;
+    }
+    .prizes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    }
+    .prize {
+    text-align: center;
+    flex: 1;
+    margin: 10px 10px;
+    background-color: transparent #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .prize p {
+    font-size: 1.2em;
+    font-weight: bold;
+    }
+    .prize h4 {
+    color: #ff7e5f;
+    margin: 0;
+    font-size: 1em
+    }
+    .prize-box {
+    position: absolute;
+    width: 650px;
+    height: 632px;
+    left: 231px;
+    top: 231px;
+    background: #EAE5E9;
+    border: 1px solid #D7D7D7;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    }
+    .winner-box {
+    background-color: #e8f8e8;
+    border: 1px solid #8ddc8d;
+    }
+    .second-prize-box {
+    background-color: #f8e8e8;
+    border: 1px solid #dc8d8d;
+    }
+    button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    button:hover {
+    background-color: #0056b3;
+    }
+    #faq {
+    margin-top: 20px;
+    }
+    .faq-item {
+    margin-bottom: 15px;
+    }
+    .faq-item h3 {
+    cursor: pointer;
+    color: #007BFF;
+    }
+    .faq-item p {
+    display: none;
+    padding: 10px 0;
+    }
+    .client-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .clientContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    }
+    .client-row {
+    display: flex;
+    gap: 20px;
+    }
+    .client-row a {
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .client-row img {
+    width: 100px;
+    height: auto;
+    opacity: 0.9;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+    }
+    .client-row a:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+    }
+    .client-row:nth-child(2) {
+    margin-top: 10px;
+    }
+    @media (max-width: 768px) {
+    .client-row img {
+    width: 50px;
+    }
+    }
+    .conversation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    max-width: 900px;
+    width: 100%;
+    background: transparent ;
+    border-radius: 10px;
+    }
+    .footer-gif {
+    width: 150px;
+    height: auto;
+    margin-right: 2rem;
+    }
+    .conversation-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 500px;
+    }
+    .conversation h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: blue;
+    }
+    .conversation h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    }
+    .conversation p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    }
+    .donate-button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color:#1846E7;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border:  1px 0px 0px 0px;
+    border-radius: 130px 130px 130px 130px;
+    cursor: pointer;
+    margin-top: 1rem;
+    }
+    .donate-button img {
+    width: 74px;
+    height: 74px;
+    left: 24px;
+    gap: 0px;
+    opacity: 0px;
+    }
+    footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color:  #000000;
+    background-color: #f4fcf9;
+    }
+    .heart {
+    color: red;
+    }
